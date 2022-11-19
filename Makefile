@@ -49,8 +49,7 @@ fclean:		clean
 
 re:			fclean all
 
-bonus:		$(OBJB)
-			@$(LIB) $(OBJB)
+bonus:		all
 
 .PHONY:		all clean fclean re
 .SILENT:	
