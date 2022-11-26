@@ -18,14 +18,15 @@ static int	ft_number_of_pad_char(char *str, t_flag flag)
 	int		len_print;
 	int		l_pad;
 	int		n_pad;
-	char	*f;
 
-	f = (char *)str;
 	len_print = 0;
-	len_print = ft_strlen(f);
+	if (ft_strlen(str) > 1)
+		len_print = 1;
+	else 
+		len_print = ft_strlen(str);
 	len_print = ft_min(flag.prec, len_print);
 	l_pad = flag.lenght - len_print;
-	if (*f == 0 || flag.prec == 0)
+	if (*str == 0 || flag.prec == 0)
 		l_pad--;
 	n_pad = ft_max(0, l_pad);
 	return (n_pad);
