@@ -22,7 +22,7 @@ static int	ft_number_of_pad_char(char *str, t_flag flag)
 	len_print = 0;
 	if (ft_strlen(str) > 1)
 		len_print = 1;
-	else 
+	else
 		len_print = ft_strlen(str);
 	len_print = ft_min(flag.prec, len_print);
 	l_pad = flag.lenght - len_print;

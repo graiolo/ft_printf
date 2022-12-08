@@ -79,5 +79,5 @@ void	*ft_memccpy(void *s1, const void *s2, int c, size_t n);
 void	*ft_memcpy_rvs(void *dest, const void *src, size_t len);
 char	*ft_strncpy(char *s1, const char *s2, size_t n);
 char	*ft_uitoa(unsigned int n);
-int	ft_num_len(unsigned	int num);
+int		ft_num_len(unsigned	int num);
 #endif 
