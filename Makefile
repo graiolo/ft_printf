@@ -30,22 +30,23 @@ RED = \033[0;91m
 CIANO = \033[0;96m
 
 $(NAME):	$(OBJ) 
-			@cd libft/ && $(MAKE) && cp libft.a ../$(NAME)
+			@cd libft/ && $(MAKE) && mv libft.a ../$(NAME)
 			@$(CC) $(SRC_FILES)
 			@$(LIB) $(OBJ)
-			@echo "$(GREEN)ft_printf compilata con successo!$(DEF_COLOR)"
+			@echo "$(GREEN)$(NAME) compilata con successo!$(DEF_COLOR)"
 
 all:		$(NAME)
 
 clean:
 			@$(RM) $(OBJ)
 			@cd libft/ && $(MAKE) clean
-			@echo "$(CIANO)file .obj eliminati con successo!$(DEF_COLOR)"
+			@echo "$(CIANO)file .obj di $(NAME) eliminati con successo!$(DEF_COLOR)"
 
 fclean:		clean
 			@$(RM) $(NAME)
-			@cd libft/ && $(MAKE) fclean
-			@echo "$(RED)libft.a e libprintf.a rimosse con successo!$(DEF_COLOR)"			
+#			@cd libft/ && $(MAKE) fclean
+			@echo "$(RED)libft.a rimossa con successo!$(DEF_COLOR)"
+			@echo "$(RED)$(NAME) rimossa con successo!$(DEF_COLOR)"			
 
 re:			fclean all
 

@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	DESCRIPTION
+	Counts the number of nodes in a list.
+	
+	RETURN VALUE
+	The length of the list.
+*/
+
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)

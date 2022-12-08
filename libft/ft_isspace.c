@@ -10,6 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	DESCRIPTION
+	checks for white-space characters.  In the "C" and  "POSIX"  lo‐
+        cales,  these are: space, form-feed ('\f'), newline ('\n'), car‐
+        riage return ('\r'), horizontal tab  ('\t'),  and  vertical  tab
+        ('\v').
+	
+	RETURN VALUE
+	The  values  returned  are  nonzero  if  the character c falls into the
+        tested class, and zero if not.
+
+*/
+
 #include "libft.h"
 
 int	ft_isspace(int c)

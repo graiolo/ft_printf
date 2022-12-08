@@ -10,6 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	DESCRIPTION
+	Allocates (with malloc(3)) and returns an array of strings obtained by 
+	splitting ’s’ using the character ’c’ as a delimiter. The array must end
+	with a NULL pointer.
+	
+	RETURN VALUE
+	The array of new strings resulting from the split. NULL if the 
+	allocation fails
+*/
+
 #include "libft.h"
 
 static	char	*ft_after_split(char const *s, const char c)
@@ -44,10 +55,11 @@ size_t *len, size_t *p)
 
 	i = *p;
 	(*p)++;
-	s_dest[i] = (char *)ft_calloc((*len + 1), sizeof(char));
+	s_dest[i] = (char *)malloc((*len + 1) * sizeof(char));
 	if (!s_dest[i])
 		return (NULL);
 	ft_strncpy(s_dest[i], s_sorg - *len, *len);
+	s_dest[i][*len] = 0;
 	*len = 0;
 	return (s_dest[i]);
 }
@@ -69,14 +81,14 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (*s_sup)
 	{
-		if (*s_sup != c)
+		if (*s_sup != c && *s_sup)
 			len++;
 		else if (len && *s_sup)
-			s_split[i] = ft_allocate(s_split, s_sup, &len, &i);
+			ft_allocate(s_split, s_sup, &len, &i);
 		s_sup++;
 	}
 	if (*s && *(s_sup - 1) != c)
 		s_split[i] = ft_allocate(s_split, s_sup, &len, &i);
-	s_split[i] = 0;
+	s_split[i] = NULL;
 	return (s_split);
 }

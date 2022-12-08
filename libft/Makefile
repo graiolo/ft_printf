@@ -64,23 +64,33 @@ OBG = $(SRC:.c=.o)
 
 OBG_BONUS = $(SRC_BONUS:.c=.o)
 
+DEF_COLOR = \033[0;39m
+GREEN = \033[0;92m
+RED = \033[0;91m
+CIANO = \033[0;96m
+
 all: $(NAME)
 
 $(NAME): $(OBG)
-	@$(CC) $(SRC)
-	@$(LIB) $(OBG) 
+	@$(CC) $(SRC) 
+	@$(LIB) $(OBG)
+	@echo "$(GREEN)$(NAME) compilata con successo!$(DEF_COLOR)"
 
 clean:
 	@$(RM) $(OBG) $(OBG_BONUS)
+	@echo "$(CIANO)file .obj di $(NAME) eliminati con successo!$(DEF_COLOR)"
 
 fclean: clean
 	@$(RM) $(NAME)
+	@echo "$(RED)$(NAME) rimossa con successo!$(DEF_COLOR)"
 
 re: fclean all 
 
-bonus: $(OBG) $(OBG_BONUS)
-	@$(CC) $(SRC_BONUS)
+bonus: $(OBG_BONUS)
+	@$(CC) $(SRC) $(SRC_BONUS)
 	@$(LIB) $(NAME) $(OBG) $(OBG_BONUS)
+	@echo "$(GREEN)bonus $(NAME) compilata con successo!$(DEF_COLOR)"
 
 .PHONY: all clean fclean bonus
+.SILENT:
 

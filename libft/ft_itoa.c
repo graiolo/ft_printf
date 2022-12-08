@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	DESCRIPTION
+	Allocates (with malloc(3)) and returns a string representing the 
+	integer received as an argument. Negative numbers must be handled.
+	
+	RETURN VALUE
+	The string representing the integer. NULL if the allocation fails.
+*/
+
 #include "libft.h"
 
 static	int	ft_get_len(int n)

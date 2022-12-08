@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	DESCRIPTION
+	Iterares the list 'lst' and applies the function 'f' on the content of 
+	each node.
+	
+	RETURN VALUE
+	None.
+*/
+
 #include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))

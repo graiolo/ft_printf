@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	DESCRIPTION
+	Outputs the integer ’n’ to the given file descriptor.
+	
+	RETURN VALUE
+	None.
+*/
+
 #include "libft.h"
 
 static void	ft_itoa_local(long int n, int fd)

@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	DESCRIPTION
+	Adds the node ’new’ at the beginning of the list.
+	
+	RETURN VALUE
+	None.
+*/
+
 #include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
