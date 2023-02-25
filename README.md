@@ -1,2 +1,9 @@
 # ft_printf
-[![graiolo's 42 Libft Score](https://badge42.vercel.app/api/v2/clbifm27u00300fjr189qmc5z/project/2832220)](https://github.com/JaeSeoKim/badge42)
+For the ft_printf project of the 42 school cursus, we must recreate the famous C library printf function. This project teaches us about variadic arguments as well as structures if we plan to implement printf's extra flags.
+
+- Supported conversions: %, c, s, p, i, d, u, x, X
+- Supported flags: # + (space)
+- Supported options: - 0 . * width
+
+## Status
+Finished: 2022-11-09. Grade: 125/100.
